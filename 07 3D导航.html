@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		/* 注意点：hover的时候尽量找那个不动的盒子去hover */
+
+		.wrap {
+			width: 100px;
+			height: 50px;
+			float: left;
+		}
+		.nav {
+			width: 100px;
+			height: 50px;
+			position: relative;
+			transform-style:preserve-3d;
+			transition:all .3s;
+		}
+		.wrap:hover .nav {
+			transform:rotateX(-90deg);
+		}
+		.nav span {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			line-height: 50px;
+			text-align: center;
+		}
+		.son1 {
+			background-color: cyan;
+			transform:translateZ(25px);
+		}
+		.son2 {
+			background-color: pink;
+			transform:rotateX(90deg) translateZ(25px);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="nav">
+			<span class="son1">上海十三期</span>
+			<span class="son2">传智播客</span>
+		</div>
+	</div>
+</body>
+</html>
