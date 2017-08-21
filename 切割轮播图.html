@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>简单切割轮播图</title>
+  
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    div.wrap{
+      width: 560px;
+      height: 300px;
+      /*border: 1px solid #000;*/
+      margin: 100px auto 0;
+      /*overflow: hidden;*/
+    }
+    ul{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 1s;
+    }
+    li{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    li:nth-child(1){
+      transform: rotateX(90deg) translateZ(150px);
+    }
+    li:nth-child(2){
+      transform: rotateX(-90deg) translateZ(150px);
+    }
+    li:nth-child(3){
+      transform:  translateZ(150px);
+    }
+    li:nth-child(4){
+      transform: rotateX(180deg) translateZ(150px);
+    }
+    .btn{
+      width: 660px;
+      height: 30px;
+      margin: 0 auto;
+      position: relative;
+      top: -165px;
+    }
+    .btn button:nth-child(1){
+      float: left;
+    }
+    .btn button:nth-child(2){
+      float:right;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <ul>
+    <li><img src="images/1.png" alt=""></li>
+    <li><img src="images/2.png" alt=""></li>
+    <li><img src="images/3.png" alt=""></li>
+    <li><img src="images/4.png" alt=""></li>
+  </ul>
+</div>
+<div class="btn">
+  <button class=btn1>左按钮</button>
+  <button class="btn2">右按钮</button>
+</div>
+
+<script>
+  var ul=document.querySelector("ul");
+  var btn1=document.querySelector(".btn1");
+  var btn2=document.querySelector(".btn2");
+  var num=0;
+  btn1.onclick=function () {
+    num++;
+    ul.style.transform="rotateX("+num*90+"deg)";
+    
+  }
+  btn2.onclick=function () {
+    num--;
+    ul.style.transform="rotateX("+num*90+"deg)";
+  
+  }
+</script>
+</body>
+</html>
