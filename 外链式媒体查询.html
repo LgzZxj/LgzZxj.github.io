@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>外链式media</title>
+  <!-- 外链式媒体查询
+		
+		通过link标签的media属性，选择链接不同的css样式
+	
+	-->
+  <!-- 需求：在大屏  1280 里面  背景色是红色
+    在中屏里面 970 - 1279 背景色是绿色
+    在小屏幕里面 970一下 背景色是蓝色 -->
+  
+  <!-- 细节：像素后面不要加分号
+  and连接符号前后必须有空格 -->
+  
+  <!-- 使用频率不高
+    弊端：css文件太多 不方便管理和维护
+    css文件过于分散，而响应式网页大部分css都是相同的
+  -->
+  <link rel="stylesheet" href="red.css" media=(min-width:1280px)>
+  <link rel="stylesheet" href="green.css" media="(min-width:970px) and (max-width:1279px)">
+  <link rel="stylesheet" href="blue.css" media="(max-width:969px)">
+</head>
+<body>
+
+</body>
+</html>
